@@ -14,6 +14,9 @@ provider "ibm" {
   ibmcloud_api_key = var.ibmcloud_api_key
 }
 
+variable pool_size {
+}
+
 data ibm_resource_group "resource_group" {
   name = "default"
 }
@@ -28,7 +31,7 @@ resource ibm_container_cluster "advcluster" {
 
   kube_version = "1.18"
 
-  default_pool_size = 3
+  default_pool_size = var.pool_size
 
   public_service_endpoint  = "true"
   private_service_endpoint = "true"
