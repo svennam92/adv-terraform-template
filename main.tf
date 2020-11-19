@@ -29,7 +29,7 @@ resource ibm_container_cluster "advcluster" {
   public_vlan_id  = "2854312"
   private_vlan_id = "2854314"
 
-  kube_version = "1.18"
+  kube_version = "1.19"
 
   default_pool_size = var.pool_size
 
